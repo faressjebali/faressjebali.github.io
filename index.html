@@ -97,6 +97,9 @@
         border-radius: 10px;
         background: var(--surface);
       }
+      .nowrap {
+        white-space: nowrap;
+      }
       .open strong {
         color: var(--ok);
         font-weight: 600;
@@ -175,7 +178,7 @@
         <p class="role">Telecom engineering student @ INSAT, focused on AI/LLM engineering</p>
         <p class="open">
           <strong>Open to Summer 2027</strong> AI/LLM engineering &amp; MLOps internships —
-          available 1&nbsp;Jun&nbsp;–&nbsp;10&nbsp;Sep, Europe or remote
+          available <span class="nowrap">1 Jun – 10 Sep</span>, Europe or remote
         </p>
         <ul class="links" aria-label="Contact">
           <li><a href="https://github.com/faressjebali">GitHub</a></li>
@@ -216,7 +219,7 @@
           <li class="project">
             <h3>homelab</h3>
             <p>
-              A recycled laptop turned always-on home server: my web app, a Matrix server with a
+              A recycled laptop turned always-on home server: tandhim, a Matrix server with a
               messaging bridge, and a motion-detection camera, all in Docker.
             </p>
             <p class="metric">3 services on 4 GB of RAM · 0 ports open to the Internet</p>
