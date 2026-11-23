@@ -1,43 +1,236 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tandhim</title>
+    <title>Fares Jebali — AI/LLM engineering</title>
+    <meta
+      name="description"
+      content="Telecom engineering student at INSAT, focused on AI/LLM engineering. Open to Summer 2027 AI/LLM engineering and MLOps internships, Europe or remote."
+    />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="canonical" href="https://faressjebali.github.io/" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0d10'/%3E%3Ctext x='32' y='42' font-family='system-ui,sans-serif' font-size='28' font-weight='700' fill='%237dd3fc' text-anchor='middle'%3EFJ%3C/text%3E%3C/svg%3E"
+    />
+
+    <!-- Link previews (LinkedIn, Slack, X…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://faressjebali.github.io/" />
+    <meta property="og:title" content="Fares Jebali — AI/LLM engineering" />
+    <meta
+      property="og:description"
+      content="Telecom engineering student @ INSAT. Open to Summer 2027 AI/LLM engineering & MLOps internships — 1 Jun – 10 Sep, Europe or remote."
+    />
+    <meta property="og:image" content="https://faressjebali.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Fares Jebali — AI/LLM engineering. Open to Summer 2027 internships."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <style>
-      body {
-        font:
-          16px/1.6 system-ui,
-          sans-serif;
-        max-width: 640px;
-        margin: 3rem auto;
-        padding: 0 1rem;
-        color: #1c1917;
-        background: #fafaf9;
+      :root {
+        --bg: #0b0d10;
+        --surface: #13171c;
+        --line: #252b33;
+        --text: #e7eaee;
+        --muted: #9aa4af;
+        --accent: #7dd3fc;
+        --ok: #86efac;
       }
-      @media (prefers-color-scheme: dark) {
-        body {
-          color: #f5f5f4;
-          background: #0c0a09;
-        }
-        a {
-          color: #93c5fd;
-        }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          17px/1.6 system-ui,
+          -apple-system,
+          'Segoe UI',
+          Roboto,
+          sans-serif;
+        overflow-wrap: anywhere;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 56px 20px 40px;
+      }
+      a {
+        color: var(--accent);
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        text-decoration-thickness: 2px;
+      }
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 2.8rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+      .role {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 1.1rem;
+      }
+      .open {
+        margin: 28px 0 0;
+        padding: 14px 16px;
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--ok);
+        border-radius: 10px;
+        background: var(--surface);
+      }
+      .open strong {
+        color: var(--ok);
+        font-weight: 600;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .links a {
+        display: inline-block;
+        padding: 6px 0;
+        font-weight: 600;
+      }
+      h2 {
+        margin: 56px 0 18px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .projects {
+        display: grid;
+        gap: 14px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .project {
+        padding: 18px 18px 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface);
+      }
+      .project h3 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+      .project p {
+        margin: 6px 0 0;
+      }
+      .metric {
+        margin-top: 10px !important;
+        font-weight: 600;
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+      }
+      .stack {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      .project .links {
+        margin-top: 8px;
+        gap: 4px 18px;
+      }
+      footer {
+        margin-top: 56px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      footer a {
+        color: var(--muted);
       }
     </style>
   </head>
   <body>
-    <h1>Tandhim</h1>
-    <p>
-      Tandhim est une application <strong>personnelle et privée</strong> d’organisation des
-      études. Elle rassemble l’emploi du temps, les devoirs, les deadlines et les annonces de cours
-      de son unique utilisateur, à partir de ses propres comptes Google (Gmail, Google Classroom,
-      Google Drive), en <strong>lecture seule</strong>.
-    </p>
-    <p>
-      L’application est auto-hébergée et n’est pas accessible au public. Elle n’est pas proposée à
-      d’autres utilisateurs.
-    </p>
-    <p><a href="confidentialite.html">Politique de confidentialité</a></p>
+    <main>
+      <header>
+        <h1>Fares Jebali</h1>
+        <p class="role">Telecom engineering student @ INSAT, focused on AI/LLM engineering</p>
+        <p class="open">
+          <strong>Open to Summer 2027</strong> AI/LLM engineering &amp; MLOps internships —
+          available 1&nbsp;Jun&nbsp;–&nbsp;10&nbsp;Sep, Europe or remote
+        </p>
+        <ul class="links" aria-label="Contact">
+          <li><a href="https://github.com/faressjebali">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/fares-jebali">LinkedIn</a></li>
+          <li><a href="mailto:fares.jebali@insat.ucar.tn">fares.jebali@insat.ucar.tn</a></li>
+        </ul>
+      </header>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <ul class="projects">
+          <li class="project">
+            <h3>tandhim</h3>
+            <p>
+              Self-hosted PWA that turns a Darija Messenger group chat, Gmail, Classroom and Drive
+              into one study planner: an LLM extracts tasks and deadlines, tested code resolves the
+              dates.
+            </p>
+            <p class="metric">95% precision on a 32-case extraction test set</p>
+            <p class="stack">Next.js · SQLite · Gemini · Docker</p>
+            <ul class="links">
+              <li><a href="https://github.com/faressjebali/tandhim">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <h3>table-to-till</h3>
+            <p>
+              QR ordering at the table, a staff PWA, and an agent that types every sale into a
+              café's legacy Windows till, which has no API.
+            </p>
+            <p class="metric">~600 automated tests across 4 apps · team of two</p>
+            <p class="stack">TypeScript · React · Node.js · PostgreSQL · Python UI automation</p>
+            <ul class="links">
+              <li><a href="https://github.com/faressjebali/table-to-till">GitHub</a></li>
+              <li><a href="/table-to-till/">Live demo</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <h3>homelab</h3>
+            <p>
+              A recycled laptop turned always-on home server: my web app, a Matrix server with a
+              messaging bridge, and a motion-detection camera, all in Docker.
+            </p>
+            <p class="metric">3 services on 4 GB of RAM · 0 ports open to the Internet</p>
+            <p class="stack">Ubuntu Server · Docker Compose · Tailscale</p>
+            <ul class="links">
+              <li><a href="https://github.com/faressjebali/homelab">GitHub</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        <p>© 2026 Fares Jebali · <a href="/tandhim/privacy/">Tandhim privacy policy</a></p>
+      </footer>
+    </main>
   </body>
 </html>
